@@ -1,0 +1,317 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body{
+   text-align: center;
+    }
+    
+#bottom ,#bottom_hat,#bottom_eye_white{
+  animation: bottom_man 1.5s  ease-in-out infinite alternate;
+  transform-origin: bottom;
+  transform-box: fill-box;
+}
+
+#bottom_eye_center{
+    animation: eye_center 1.5s ease-in-out infinite alternate;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+#left_hand{ 
+    animation: hand 1.5s  ease-in-out infinite alternate;
+    transform-origin: bottom; 
+    transform-box: fill-box;
+}
+#right_hand{ 
+    animation: hand_right 1.5s  ease-in-out infinite alternate;
+    transform-origin: right; 
+    transform-box: fill-box;
+}
+
+#ball_top_hand{
+    animation: hand_ball 10s linear;
+    transform-origin: bottom; 
+    transform-box: fill-box;
+    animation-fill-mode: both; 
+}
+
+#top,#legs{
+    animation: top_man 1.5s  ease-in-out infinite alternate;
+    transform-origin: bottom; 
+}
+
+#legs{
+    animation: top_man_legs 1.5s  ease-in-out infinite alternate;
+    transform-origin: bottom; 
+    transform-box: fill-box;
+}
+
+#hat{
+    animation: top_man_hat 1.5s  ease-in-out infinite alternate;
+    transform-origin: bottom; 
+}
+
+#ball_in_line{
+    animation: ball 3s ease-in-out infinite alternate;
+}
+
+
+#balls_in_line{
+    animation: balls_line 6s linear ;
+    transform-origin: bottom;
+    transform-box: fill-box;
+    animation-fill-mode: both; 
+}
+
+#top_eye_center{
+    animation: top_eye_center 1.5s ease-in-out infinite alternate;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+#top_mouth{
+    animation: mouth 1.5s ease-in-out infinite alternate;
+    transform-origin: center;
+    transform-box: fill-box;
+   
+}
+
+#square{
+  animation: square_bounce 0.8s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+#ball_floor{
+    animation: ball_floor_move 1.5s ease-in-out infinite alternate;
+    transform-origin: bottom;
+    transform-box: fill-box;
+  }
+#ball_two{
+    animation: ball_two_move 3s linear alternate;
+    transition-delay: 4s;
+    transform-origin: bottom;
+    transform-box: fill-box;
+    animation-fill-mode:forwards ;
+  }
+
+#ball2{
+    animation: ball2_move 1.5s linear alternate;
+    transition-delay: 3s;
+    transform-origin: bottom;
+    transform-box: fill-box;
+    animation-fill-mode:forwards;
+  }
+#ball3{
+    animation: ball3_move 4s linear alternate;
+    transition-delay: 3s;
+    transform-origin: bottom;
+    transform-box: fill-box;
+    animation-fill-mode:forwards;
+  }
+
+
+@keyframes bottom_man{
+    from {
+        transform: rotate(6deg);
+      }
+     to {
+        transform: rotate(-6deg);
+      }
+    }
+
+@keyframes eye_center{
+    from {
+        transform: translateY(3px) translateX(-5px);
+      }
+     to {
+        transform: translateY(-3px) translateX(6px) scale(1.2);
+      }
+    }
+
+@keyframes ball {
+    from {
+        transform: translateX(50px)
+    }
+    to {
+        transform: translateX(-50px)
+    }
+  }
+
+  @keyframes balls_line {
+  0% {
+        transform: translateX(0px);
+    }
+    25% {
+        transform: translateX(280px);
+    }
+    45% {
+        transform: translateY(85px) translateX(450px);
+    }
+    65% {
+        transform: translateY(-50px) translateX(520px);
+    }
+    85% {
+        transform: translateY(-50px) translateX(650px)
+    }
+    95% {
+        transform: translateY(520px) translateX(650px);
+        visibility: hidden;
+    }
+    100% {
+        transform: translateY(300px) translateX(500px);
+        visibility: hidden;
+    }
+  }
+
+
+@keyframes hand{
+    from {
+        transform: rotateX(0deg) translateY(-15px);
+      }
+     to {
+        transform: rotateX(40deg) ;
+      }
+    }
+
+@keyframes hand_ball {
+    0% {
+        transform: translateY(-15px);
+        }
+    15% {
+        transform:  translateY(10px) scale(0.9);
+        }
+    30% {
+        transform: translateY(-15px);
+        }
+    40% {
+        transform:  translateY(-15px) translateX(280px);
+    }
+    50% {
+        transform: translateY(70px) translateX(450px);
+    }
+    60% {
+        transform: translateY(-60px) translateX(510px);
+    }
+    80% {
+        transform: translateY(-60px) translateX(640px)
+    }
+    90% {
+        transform: translateY(520px) translateX(640px);
+        visibility: hidden;
+    }
+    100% {
+        transform: translateY(400px) translateX(500px);
+        visibility: hidden;
+    }
+  }
+
+@keyframes hand_right{
+     from {
+        transform: rotate(10deg);
+        }
+    to {
+         transform: rotate(-10deg);
+        }
+    }
+
+@keyframes top_man{
+    from{
+        transform: rotateX(0deg) ;
+    }
+    to{
+        transform: rotateX(12deg);
+    }
+}
+
+
+@keyframes top_man_hat{
+    from{
+        transform: rotateX(0deg);
+    }
+    to{
+        transform: rotateX(10deg);
+    }
+}
+
+@keyframes top_man_legs{
+    from {
+        transform: rotate(5deg);
+      }
+     to {
+        transform: rotate(-5deg);
+      }
+    }
+
+@keyframes top_eye_center{
+    from {
+         transform: translateY(-3px) translateX(6px) scale(1.2)
+        }
+    to {
+        transform: translateY(0px);
+         }
+    }
+
+ @keyframes mouth{
+    from {
+        transform: translateY(-3px) translateX(-6px) scaleY(0.8) scaleX(0.9);
+        }
+    to {
+        transform: rotate(6deg) scale(1.2);
+        }
+    }
+
+@keyframes square_bounce{
+    0% { transform: translateY(0); }
+    25% { transform: translateY(-5px); }
+    75% { transform: translateY(0px); }
+    100% { transform: translateY(-20px); }
+  }
+
+@keyframes ball_floor_move{
+    0% { transform: translateX(-20px); }
+    45% { transform: translateX(0px);}
+    100% { transform: translateY(-10px); }
+}
+  
+@keyframes ball_two_move{
+    10%{
+        transform: translateY(-15px);
+    }
+    15%{
+        transform: translateY(0px);
+    }
+    55%{
+        transform: translateX(100px) translateY(-4px);
+    }
+    100%{
+        transform: translateX(250px) translateY(7px);
+    }
+}
+
+@keyframes ball2_move{
+    99%{
+       transform: translateY(525px);
+    }
+    100%{
+        transform: translateY(532px);
+        visibility: hidden;
+     }
+}
+
+@keyframes ball3_move{
+    25%{
+        transform: translateX(100px) translateY(-4px);
+    }
+    60%{
+        transform: translateX(250px) translateY(7px);
+    }
+    95%{
+        transform: translateX(210px) translateY(0px);
+    }
+    100%{
+        transform: translateX(200px) translateY(30px);
+        visibility: hidden;
+    }
+}
